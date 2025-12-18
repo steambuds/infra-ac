@@ -1,3 +1,4 @@
+.obsidian
 # Local .terraform directories
 .terraform/
 
@@ -35,3 +36,22 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Environment variables and secrets
+.env
+*.env
+!.env.example
+
+# Backend configuration
+backend-config.tfbackend
+*.tfbackend
+!*.tfbackend.example
+
+# GCP Service Account keys
+*-sa-key.json
+github-sa-key.json
+*.json.key
+
+# Kubernetes secrets
+*.secret.yaml
+

@@ -1,0 +1,5 @@
+# Terraform Backend Configuration
+# Copy this file to backend-config.tfbackend and update with your project ID
+# Usage: terraform init -backend-config=backend-config.tfbackend
+
+bucket = "your-project-id-tf-state"

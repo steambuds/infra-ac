@@ -1,0 +1,38 @@
+# Terraform Variables Configuration
+# Copy this file to terraform.tfvars and fill in your actual values
+# terraform.tfvars is in .gitignore and won't be committed
+
+# Project Configuration
+project_id = "your-project-id-here"
+region     = "asia-south1"
+zone       = "asia-south1-a"
+
+# Network Configuration
+vpc_name    = "sb-vpc"
+subnet_name = "sb-subnet"
+subnet_cidr = "10.0.0.0/24"
+
+# Cluster Configuration
+cluster_name = "sb-cluster"
+
+# Safe Node Pool Configuration
+safe_pool_name         = "safe-pool"
+safe_pool_machine_type = "e2-small"  # Options: e2-micro (~$6.50/mo), e2-small (~$13/mo), e2-medium (~$26/mo)
+safe_pool_disk_size    = 30
+safe_pool_node_count   = 1
+
+# Spot Node Pool Configuration
+spot_pool_name         = "spot-pool"
+spot_pool_machine_type = "e2-medium"  # Options: e2-small (~$3.50/mo), e2-medium (~$7/mo), e2-standard-2 (~$14/mo)
+spot_pool_min_nodes    = 0            # Set to 0 to save costs when idle
+spot_pool_max_nodes    = 5
+
+# Resource Labels (for cost tracking)
+labels = {
+  project     = "steambuds"
+  environment = "development"
+  managed_by  = "terraform"
+  cost_center = "engineering"
+}
+
+environment = "development"
