@@ -55,6 +55,7 @@ source setup.sh
 
 ```bash
 # Source the .env file to load variables
+
 source .env
 
 # Set the GCP project
